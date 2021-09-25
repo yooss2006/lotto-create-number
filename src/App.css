@@ -7,19 +7,44 @@
   padding: 30px;
   background-color: #393f50;
   color: #F2eee7;
+
 }
+.gnbHeight{
+  height: 500px;
+  font-size: 50px;
+  position: relative;
+  z-index: 3;
+}
+.gnbHeight p{
+  margin-top: 150px;
+  font-size: 30px;
+}
+
+.bodyContainer{
+  position: relative;
+}
+
 .list{
   width: 25%;
   height: 30px;
   margin: 0 auto;
   line-height: 30px;
-  border-bottom: 1px solid #393f50;
-  color: #393f50;
+  border-bottom: 1px solid #F2eee7;
+  color: #F2eee7;
+  position: relative;
+  z-index: 5;
 }
 .list span{
   padding: 0 70px;
 }
 
+.bodyContainer video{
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  filter: brightness(5%)
+}
 
 @font-face {
   font-family: 'Cafe24SsurroundAir';
