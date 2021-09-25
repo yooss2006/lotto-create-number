@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+  font-family: 'Cafe24SsurroundAir';
+}
+
+.gnb{
+  padding: 30px;
+  background-color: #393f50;
+  color: #F2eee7;
+}
+.list{
+  width: 25%;
+  height: 30px;
+  margin: 0 auto;
+  line-height: 30px;
+  border-bottom: 1px solid #393f50;
+  color: #393f50;
+}
+.list span{
+  padding: 0 70px;
+}
+
+
+@font-face {
+  font-family: 'Cafe24SsurroundAir';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
