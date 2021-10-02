@@ -1,10 +1,12 @@
-import './App.css';
+import './App.scss';
 import { useState } from 'react';
+import RandomNumberGame from './RandomNumberGame'
 
 function App() {
   let [isList, ListSwitch] = useState(false);
   let [titleName, titleNameChange] = useState("lotto number maker");
   let [menu, menu수정] = useState(0);
+  let [lotto번호, lotto번호수정] = useState([0,0,0,0,0,0]);
   
   function listSwitch(){
     let newTitle = "";
@@ -29,9 +31,9 @@ function App() {
          <source src="https://cdn.videvo.net/videvo_files/video/free/2013-07/large_watermarked/hd0046_preview.mp4" type="video/mp4"/> 
        </video>)
        case 1:
-         return <div className="gameContainer">랜덤번호</div>
+         return <RandomNumberGame lotto번호={lotto번호} lotto번호수정={lotto번호수정} />
         case 2:
-        return <div className="gameContainer">번호게임</div>
+        return <NumberGame />
      }
   }
 
@@ -72,4 +74,13 @@ function List(props) {
   )
 }
 
+
+function NumberGame(props){
+  return (
+  <div className="gameContainer">
+    
+    
+  </div>
+    )
+}
 export default App;
