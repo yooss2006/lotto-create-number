@@ -13,7 +13,7 @@ function RandomNumberGame(props){
         if(번호검사>=0){
             for(let i=0; i<10; i++){
                 번호 =  random();
-                console.log("중복")
+                console.log("중복발생")
                 번호검사 = props.lotto번호.findIndex((a)=>{return a===번호})
                 if(번호검사<0){
                     let array = [...props.lotto번호];
@@ -28,7 +28,27 @@ function RandomNumberGame(props){
             props.lotto번호수정(array);
         } 
     }
-
+    
+    function 전체랜덤(){
+        let array =[0,0,0,0,0,0];
+        array.forEach(function(data, index){
+            let 번호 =  random();
+            let 번호검사 = array.findIndex((a)=>{return a===번호})
+           if(번호검사<0){
+               array[index] = 번호
+           } else{
+                for(let i=0; i<10; i++){
+                    번호 =  random();
+                    번호검사 = props.lotto번호.findIndex((a)=>{return a===번호})
+                    if(번호검사<0){
+                        array[index]=번호
+                        break;
+                    }
+            }
+           }
+        })
+        props.lotto번호수정(array)
+    }
 
     return (
     <div className="gameContainer">
@@ -40,7 +60,7 @@ function RandomNumberGame(props){
       <span className="lottoBox"><div className="card" onClick={()=>{랜덤번호대입하기(5)}}>{props.lotto번호[5]}</div></span>
       <div className="clearBoth"></div>
       <div>
-        <Button variant="light" onClick={random}>전체 랜덤 뽑기</Button>
+        <Button variant="light" onClick={전체랜덤}>전체 랜덤 뽑기</Button>
         <h2>당첨번호</h2>
         <h5>1회차 : 
             <span>{props.lotto번호[0]}</span>
