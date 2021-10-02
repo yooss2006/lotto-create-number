@@ -4,13 +4,11 @@ import { useState } from 'react';
 function App() {
   let [isList, ListSwitch] = useState(false);
   let [titleName, titleNameChange] = useState("lotto number maker");
-  
+  let [menu, menu수정] = useState(0);
   
   function listSwitch(){
-
     let newTitle = "";
     if(!isList){
-
       document.querySelectorAll('.gnb')[0].classList.remove('gnbHeight');
       for(let i=0; i<titleName.length; i++){
         setTimeout(function(){
@@ -22,6 +20,19 @@ function App() {
       document.querySelectorAll('.gnb')[0].classList.add('gnbHeight');
     }
     ListSwitch(!isList);
+  }
+
+  function menuChange(number){
+     switch(number){
+       case 0:
+         return (<video autoPlay muted loop>
+         <source src="https://cdn.videvo.net/videvo_files/video/free/2013-07/large_watermarked/hd0046_preview.mp4" type="video/mp4"/> 
+       </video>)
+       case 1:
+         return <div className="gameContainer">랜덤번호</div>
+        case 2:
+        return <div className="gameContainer">번호게임</div>
+     }
   }
 
   return (
@@ -39,23 +50,24 @@ function App() {
       <div className="bodyContainer">
       {
       isList ?
-      <List/> :
+      <List menu={menu} menu수정={menu수정}/> :
       null 
       }
-        <video autoPlay muted loop>
-          <source src="https://cdn.videvo.net/videvo_files/video/free/2013-07/large_watermarked/hd0046_preview.mp4" type="video/mp4"/> 
-        </video>
+
+      {
+        menuChange(menu)
+      }
       </div>
 
     </div>
   );
 }
 
-function List() {
+function List(props) {
   return (
     <span className="list">
-      <span>랜덤 번호</span>
-      <span>번호 게임</span>
+      <span onClick={()=>{props.menu수정(1)}}>랜덤 번호</span>
+      <span onClick={()=>{props.menu수정(2)}}>번호 게임</span>
     </span>
   )
 }
