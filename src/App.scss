@@ -56,7 +56,7 @@ html, body{
   width: 70%;
   margin: auto;
   button{
-    margin-bottom: 70px;
+    margin:0 10px 70px 10px;
   }
   h2{
     margin-bottom: 50px;
@@ -69,14 +69,27 @@ html, body{
   .lottoBox{
     width: 16%;
     float:left;
-    .card{
+
+    .outsideCircle{
       width: 150px;
       height: 150px;
-      line-height: 150px;
-      background-color: #F2eee7;
+      background-color: #61dafb;
+      position: relative;
       display: inline-block;
       color: black;
       border-radius: 200px;
+      .insideCircle{
+        position:absolute;
+        width: 100px;
+        height: 100px;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 100px;
+        background-color: #F2eee7;
+        display: inline-block;
+        border-radius: 200px;
+      }
     }
   }
 }

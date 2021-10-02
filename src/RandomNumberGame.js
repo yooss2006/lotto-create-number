@@ -47,22 +47,29 @@ function RandomNumberGame(props){
             }
            }
         })
-        props.lotto번호수정(array)
+        props.lotto번호수정(array);
     }
 
+    let 색깔 = ()=>{
+       let random = Math.floor(Math.random()*props.색상배열.length);
+       return props.색상배열[random];
+    }
+
+    
     return (
     <div className="gameContainer">
-      <span className="lottoBox"><div className="card" onClick={()=>{랜덤번호대입하기(0)}}>{props.lotto번호[0]}</div></span>
-      <span className="lottoBox"><div className="card" onClick={()=>{랜덤번호대입하기(1)}}>{props.lotto번호[1]}</div></span>
-      <span className="lottoBox"><div className="card" onClick={()=>{랜덤번호대입하기(2)}}>{props.lotto번호[2]}</div></span>
-      <span className="lottoBox"><div className="card" onClick={()=>{랜덤번호대입하기(3)}}>{props.lotto번호[3]}</div></span>
-      <span className="lottoBox"><div className="card" onClick={()=>{랜덤번호대입하기(4)}}>{props.lotto번호[4]}</div></span>
-      <span className="lottoBox"><div className="card" onClick={()=>{랜덤번호대입하기(5)}}>{props.lotto번호[5]}</div></span>
+      <span className="lottoBox"><div className="outsideCircle" onClick={()=>{랜덤번호대입하기(0)}}><div className="insideCircle">{props.lotto번호[0]}</div></div></span>
+      <span className="lottoBox"><div className="outsideCircle" onClick={()=>{랜덤번호대입하기(1)}}><div className="insideCircle">{props.lotto번호[1]}</div></div></span>
+      <span className="lottoBox"><div className="outsideCircle" onClick={()=>{랜덤번호대입하기(2)}}><div className="insideCircle">{props.lotto번호[2]}</div></div></span>
+      <span className="lottoBox"><div className="outsideCircle" onClick={()=>{랜덤번호대입하기(3)}}><div className="insideCircle">{props.lotto번호[3]}</div></div></span>
+      <span className="lottoBox"><div className="outsideCircle" onClick={()=>{랜덤번호대입하기(4)}}><div className="insideCircle">{props.lotto번호[4]}</div></div></span>
+      <span className="lottoBox"><div className="outsideCircle" onClick={()=>{랜덤번호대입하기(5)}}><div className="insideCircle">{props.lotto번호[5]}</div></div></span>
       <div className="clearBoth"></div>
       <div>
         <Button variant="light" onClick={전체랜덤}>전체 랜덤 뽑기</Button>
+        <Button variant="light" onClick={()=>{props.lotto번호수정([0,0,0,0,0,0])}}>새로고침</Button>
         <h2>당첨번호</h2>
-        <h5>1회차 : 
+        <h5>😁 : 
             <span>{props.lotto번호[0]}</span>
             <span>{props.lotto번호[1]}</span>
             <span>{props.lotto번호[2]}</span>

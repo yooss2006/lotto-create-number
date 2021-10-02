@@ -7,6 +7,7 @@ function App() {
   let [titleName, titleNameChange] = useState("lotto number maker");
   let [menu, menu수정] = useState(0);
   let [lotto번호, lotto번호수정] = useState([0,0,0,0,0,0]);
+  let [색상배열, 색상배열수정] = useState(['#2C2891','#916BBF','#FFDEFA','#D9CAB3','#852747','#A2CDCD']);
   
   function listSwitch(){
     let newTitle = "";
@@ -31,7 +32,11 @@ function App() {
          <source src="https://cdn.videvo.net/videvo_files/video/free/2013-07/large_watermarked/hd0046_preview.mp4" type="video/mp4"/> 
        </video>)
        case 1:
-         return <RandomNumberGame lotto번호={lotto번호} lotto번호수정={lotto번호수정} />
+         return <RandomNumberGame 
+          lotto번호={lotto번호} 
+          lotto번호수정={lotto번호수정} 
+          색상배열 = {색상배열}
+          색상배열수정 = {색상배열수정}/>
         case 2:
         return <NumberGame />
      }
