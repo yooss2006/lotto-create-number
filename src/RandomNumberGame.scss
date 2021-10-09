@@ -1,0 +1,73 @@
+
+.gameContainer{
+    padding-top: 50px;
+    width: 70%;
+    margin: auto;
+    button{
+      margin:0 10px 70px 10px;
+    }
+    h2{
+      margin-bottom: 50px;
+    }
+    h5{
+      span{
+       padding: 10px;
+      }
+    }
+    .lottoBox{
+      width: 16%;
+      float:left;
+  
+      .outsideCircle{
+        width: 150px;
+        height: 150px;
+        background-color: #61dafb;
+        position: relative;
+        display: inline-block;
+        color: black;
+        border-radius: 200px;
+        .insideCircle{
+          position:absolute;
+          width: 100px;
+          height: 100px;
+          top:50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          line-height: 100px;
+          background-color: #F2eee7;
+          display: inline-block;
+          border-radius: 200px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width : 1200px) {
+    .lottoBox{
+        transform: scale(75%);
+      }
+}
+
+@media screen and (max-width : 992px) {
+    .lottoBox{
+        transform: scale(60%);
+      }
+}
+@media screen and (max-width : 768px) {
+    .lottoBox{
+        transform: scale(50%);
+      }
+
+}
+@media screen and (max-width : 550px) {
+    .gameContainer{
+        h5{
+          span{
+           padding: 5px;
+          }
+        }
+    .lottoBox{
+        transform: scale(35%);
+      }
+    }
+}

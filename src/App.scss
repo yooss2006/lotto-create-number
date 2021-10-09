@@ -51,48 +51,6 @@ html, body{
   }
 }
 
-.gameContainer{
-  padding-top: 50px;
-  width: 70%;
-  margin: auto;
-  button{
-    margin:0 10px 70px 10px;
-  }
-  h2{
-    margin-bottom: 50px;
-  }
-  h5{
-    span{
-     padding: 10px;
-    }
-  }
-  .lottoBox{
-    width: 16%;
-    float:left;
-
-    .outsideCircle{
-      width: 150px;
-      height: 150px;
-      background-color: #61dafb;
-      position: relative;
-      display: inline-block;
-      color: black;
-      border-radius: 200px;
-      .insideCircle{
-        position:absolute;
-        width: 100px;
-        height: 100px;
-        top:50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        line-height: 100px;
-        background-color: #F2eee7;
-        display: inline-block;
-        border-radius: 200px;
-      }
-    }
-  }
-}
 
 .clearBoth{
   clear: both;
@@ -107,27 +65,6 @@ html, body{
   font-style: normal;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -151,4 +88,26 @@ html, body{
   to {
     transform: rotate(360deg);
   }
+}
+
+@media screen and (max-width : 1200px) {
+
+}
+
+@media screen and (max-width : 992px) {
+
+
+}
+@media screen and (max-width : 768px) {
+
+
+}
+@media screen and (max-width : 400px) {
+  .list{
+    span{
+      padding: 0 20px;
+    }
+  }
+  
+
 }

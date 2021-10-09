@@ -1,7 +1,7 @@
 import './App.scss';
 import { useState } from 'react';
 import RandomNumberGame from './RandomNumberGame'
-
+import NumberGame from './NumberGame';
 function App() {
   let [isList, ListSwitch] = useState(false);
   let [titleName, titleNameChange] = useState("lotto number maker");
@@ -80,12 +80,5 @@ function List(props) {
 }
 
 
-function NumberGame(props){
-  return (
-  <div className="gameContainer">
-    
-    
-  </div>
-    )
-}
+
 export default App;
